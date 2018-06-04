@@ -1,0 +1,70 @@
+<section>
+	<div class="row" *ngIf="newuserslist != '' && newuserslist != undefined && newuserslist != null">
+		<div class="col-md-12">Edit Users</div>
+	</div>
+	<form novalidate="novalidate">
+		<div class="row" style="margin-top:1%;">
+			<div class="col-md-4">				
+				  <div class="form-group">
+				    <label for="id">Id</label>
+				    <input type="text" class="form-control" id="id" value="{{newuserslist.id}}">
+				  </div>	
+			</div>
+			<div class="col-md-4">
+			 	<div class="form-group">
+				    <label for="name">Name:</label>
+				    <input type="text" class="form-control" id="name" value="{{newuserslist.name}}">
+			  	</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+				    <label for="surname">Surname:</label>
+				    <input type="text" class="form-control" id="surname" value="{{newuserslist.surname}}">
+			  	</div>
+			</div>
+		</div>
+		<div class="row" style="margin-top:1%;">
+			<div class="col-md-4">
+			 	<div class="form-group">
+				    <label for="dob">Birthdate:</label>
+				    <input type="date" class="form-control" id="dob" value="{{newuserslist.dob}}">
+			  	</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+				    <label for="phone">Phone:</label>
+				    <input type="number" class="form-control" id="phone" value="{{newuserslist.phone}}">
+			  	</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+				    <label for="city">City:</label>
+				    <input type="text" class="form-control" id="city" value="{{newuserslist.city}}">
+				  </div>
+			</div>
+		</div>
+		<div class="row" style="margin-top:1%;">
+			<div class="col-md-4">
+				<div class="form-group">
+				    <label for="street">Street:</label>
+				    <input type="text" class="form-control" id="street" value="{{newuserslist.street}}">
+			  	</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+				    <label for="number">Number:</label>
+				    <input type="text" class="form-control" id="number" value="{{newuserslist.numberval}}">
+			  	</div>
+			</div>
+			<div class="col-md-4">
+
+			</div>
+		</div>
+		<div class="row" style="margin-top:1%;">
+			<div class="col-md-12">
+				<button type="submit" class="btn btn-primary" (click)="updateData(newuserslist.id)">Update</button>
+			</div>			
+		</div>
+	</form>
+</section>
+
